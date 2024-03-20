@@ -1,20 +1,9 @@
-from fastapi import FastAPI, HTTPException
+
 from pydantic import BaseModel
-import pymongo
-
 from db.models import Item
+from core.config import *
+from core.config import app
 
-# MongoDB connection (update "mydatabase" to your db name)
-mongo_ip="172.17.0.3"
-mongo_port="27017"
-client = pymongo.MongoClient("mongodb://"+mongo_ip+":"+mongo_port+"/")
-database_name="mydatabase"
-
-db = client[database_name]
-app = FastAPI()
-
-def getApp():
-    return app
 
 @app.get("/")
 
