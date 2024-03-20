@@ -1,5 +1,6 @@
 import pymongo
 from fastapi import FastAPI, HTTPException
+from pymongo.collection import ReturnDocument
 
 # MongoDB connection (update "mydatabase" to your db name)
 mongo_ip="172.17.0.3"
@@ -11,5 +12,5 @@ database_name="mydatabase"
 db = client[database_name]
 app = FastAPI()
 
-def getApp():
-    return app
+# def getApp():
+#     return app

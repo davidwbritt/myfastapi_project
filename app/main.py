@@ -1,5 +1,4 @@
-from fastapi import FastAPI, HTTPException
-from db.item_crud import getApp
+from db import getApp
 
 if __name__ == "__main__":
     import uvicorn

@@ -6,3 +6,9 @@ class Item(BaseModel):
     description: Optional[str] = None
     price: float
     tax: Optional[float] = None
+
+class User(BaseModel):
+    username: str
+    password: str
+    level: int
+    notes: Optional[str] = None
