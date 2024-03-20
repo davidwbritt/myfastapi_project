@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
-from core.config import app
+from db.item_crud import getApp
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    uvicorn.run(getApp(), host="0.0.0.0", port=5000)
